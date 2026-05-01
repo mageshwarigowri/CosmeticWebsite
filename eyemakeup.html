@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glowify – Where Luxury Meets Skin Science</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "Inter", "Arial", "sans-serif"],
+          },
+          colors: {
+            glow: {
+              pink: "#f81f7f",
+              light: "#fff2f8",
+              soft: "#f7d9e8",
+            },
+          },
+          boxShadow: {
+            glow: "0 12px 24px rgba(0, 0, 0, 0.16)",
+            soft: "0 8px 18px rgba(0, 0, 0, 0.12)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="/Assets/CSS/style.css">
+</head>
+<body class="overflow-x-hidden">
+
+<!-- ========== STICKY HEADER ========== -->
+<header id="main-header" class="bg-white border-b border-pink-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+    <!-- Logo -->
+    <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" alt="Logo" class="w-16 h-auto"/>
+
+    <!-- Search -->
+    <div class="flex-1 max-w-xs hidden sm:block">
+      <div class="flex items-center bg-pink-50 rounded-full px-4 py-2 gap-2 border border-pink-100">
+        <svg class="w-4 h-4 text-pink-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search lipsticks…" class="bg-transparent outline-none text-sm text-gray-500 w-full placeholder-pink-300"/>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 flex-1 justify-center">
+      <a href="index.html" class="nav-link hover:text-pink-600">Home</a>
+      <!-- Shop Menu -->
+      <div class="relative inline-block">
+
+        <!-- Shop Link -->
+        <button 
+          id="shopBtn"
+          class="nav-link hover:text-pink-600"
+        >
+          Shop
+        </button>
+
+        <!-- Dropdown -->
+        <div 
+        id="shopDropdown"
+        class="hidden absolute top-12 left-0 w-72 bg-white rounded-xl shadow-2xl p-4 z-50"
+      >
+
+          <!-- Heading -->
+          <h2 class="text-xl font-semibold mb-6">Category</h2>
+
+          <!-- Menu Items -->
+          <div class="space-y-1">
+
+            <!-- Item -->
+            <a 
+              href="eyemakeup.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Eye Makeup
+              <span>›</span>
+            </a>
+
+            <a 
+              href="fragrance.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Fragrance
+              <span>›</span>
+            </a>
+
+            <a 
+              href="haircare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Hair Care
+              <span>›</span>
+            </a>
+
+            <a 
+              href="lipsticks.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Lipsticks
+              <span>›</span>
+            </a>
+
+            <a 
+              href="nails.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Nails
+              <span>›</span>
+            </a>
+
+            <a 
+              href="skincare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Skincare
+              <span>›</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <a href="offers.html" class="nav-link hover:text-pink-600">Offers</a>
+      <a href="about.html" class="nav-link hover:text-pink-600">About</a>
+      <a href="contact.html" class="nav-link hover:text-pink-600">Contact</a>
+    </nav>
+
+    <!-- Icons -->
+     <div class="flex items-center gap-3 ml-auto">
+      <a href="cart.html">
+      <button class="relative p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="absolute top-0.5 right-0.5 w-4 h-4 text-xs bg-pink-500 text-white rounded-full flex items-center justify-center">2</span>
+      </button>
+      </a>
+      <a href="wishlist.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      </a>
+      <a href="login.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- Product Listing Section -->
+<section class="bg-gray-100 py-16 px-6">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+    <!-- Filter Sidebar -->
+<div class="bg-white rounded-2xl shadow-lg p-6 h-fit">
+
+  <!-- Filter Heading -->
+  <div class="flex items-center gap-3 mb-6">
+    <img src="Assets/Images/filter.png" class="w-5 h-5">
+    <h2 class="text-2xl font-semibold">Filter</h2>
+  </div>
+
+  <!-- Filter Items -->
+  <div class="space-y-4">
+
+    <!-- Brand Filter -->
+    <div class="bg-gray-100 rounded-xl overflow-hidden">
+      
+      <button 
+        onclick="toggleFilter('brandFilter')"
+        class="w-full flex justify-between items-center px-5 py-4 text-lg hover:bg-gray-200 transition"
+      >
+        Brand
+        <span>⌄</span>
+      </button>
+
+      <!-- Dropdown -->
+      <div 
+        id="brandFilter"
+        class="hidden max-h-48 overflow-y-auto px-5 pb-4 space-y-3"
+      >
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Glowify
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> LuxeAura
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Velvete
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Elan Beauty
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Auralips
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Silkshade
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Royale Glow
+        </label>
+
+        <label class="flex items-center gap-3">
+          <input type="checkbox"> Divatone
+        </label>
+      </div>
+    </div>
+
+    <!-- Color Filter -->
+    <div class="bg-gray-100 rounded-xl overflow-hidden">
+
+      <button 
+        onclick="toggleFilter('colorFilter')"
+        class="w-full flex justify-between items-center px-5 py-4 text-lg hover:bg-gray-200 transition"
+      >
+        Color
+        <span>⌄</span>
+      </button>
+
+      <div 
+        id="colorFilter"
+        class="hidden max-h-48 overflow-y-auto px-5 pb-4 space-y-3"
+      >
+        <label class="flex items-center gap-3"><input type="checkbox"> Classic Red</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Cherry Red</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Wine Red</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Baby Pink</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Rose Pink</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Fuchsia</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Peach Nude</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Chocolate Brown</label>
+      </div>
+    </div>
+
+    <!-- Discount Filter -->
+    <div class="bg-gray-100 rounded-xl overflow-hidden">
+
+      <button 
+        onclick="toggleFilter('discountFilter')"
+        class="w-full flex justify-between items-center px-5 py-4 text-lg hover:bg-gray-200 transition"
+      >
+        Discount
+        <span>⌄</span>
+      </button>
+
+      <div 
+        id="discountFilter"
+        class="hidden max-h-48 overflow-y-auto px-5 pb-4 space-y-3"
+      >
+        <label class="flex items-center gap-3"><input type="checkbox"> 10-20%</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> 20-50%</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> 50% & Above</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Buy 1 Get 1</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> Flat ₹100 Off</label>
+      </div>
+    </div>
+
+    <!-- Price Filter -->
+    <div class="bg-gray-100 rounded-xl overflow-hidden">
+
+      <button 
+        onclick="toggleFilter('priceFilter')"
+        class="w-full flex justify-between items-center px-5 py-4 text-lg hover:bg-gray-200 transition"
+      >
+        Price
+        <span>⌄</span>
+      </button>
+
+      <div 
+        id="priceFilter"
+        class="hidden max-h-48 overflow-y-auto px-5 pb-4 space-y-3"
+      >
+        <label class="flex items-center gap-3"><input type="checkbox"> ₹0 - ₹499</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> ₹500 - ₹799</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> ₹800 - ₹1099</label>
+        <label class="flex items-center gap-3"><input type="checkbox"> ₹1100 & Above</label>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <!-- Product Area -->
+    <div class="lg:col-span-3">
+
+      <!-- Top Header -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+
+  <!-- Title -->
+  <div>
+    <h2 class="text-3xl font-bold">EyeCare</h2>
+    <div class="w-full h-[2px] bg-gray-300 mt-2"></div>
+  </div>
+
+  <!-- Sort Dropdown -->
+  <div class="relative">
+
+    <!-- Sort Button -->
+    <button 
+      id="sortBtn"
+      class="border border-pink-300 px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-pink-50 transition bg-white"
+    >
+      <span id="selectedSort" class="font-semibold">
+        Sort By
+      </span>
+
+      <span><img src="Assets/Images/sort.png"></span>
+    </button>
+
+    <!-- Dropdown -->
+    <div 
+      id="sortDropdown"
+      class="hidden absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50"
+    >
+
+      <button 
+        onclick="selectSort('Recommended')"
+        class="w-full text-left px-5 py-4 hover:bg-pink-50 transition"
+      >
+        Recommended
+      </button>
+
+      <button 
+        onclick="selectSort('Top Rated')"
+        class="w-full text-left px-5 py-4 hover:bg-pink-50 transition"
+      >
+        Top Rated
+      </button>
+
+      <button 
+        onclick="selectSort('Price: Low-High')"
+        class="w-full text-left px-5 py-4 hover:bg-pink-50 transition"
+      >
+        Price: Low-High
+      </button>
+
+      <button 
+        onclick="selectSort('Price High-Low')"
+        class="w-full text-left px-5 py-4 hover:bg-pink-50 transition"
+      >
+        Price High-Low
+      </button>
+
+      <button 
+        onclick="selectSort('Offers')"
+        class="w-full text-left px-5 py-4 hover:bg-pink-50 transition"
+      >
+        Offers
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <!-- Product Card -->
+        <div class="bg-white rounded-2xl border border-pink-100 shadow-md hover:shadow-xl transition p-4">
+
+          <!-- Image -->
+          <div class="rounded-2xl overflow-hidden">
+            <img
+              src="Assets/Images/eye1.webp"
+              alt="Product"
+              class="w-full h-[220px] object-contain hover:scale-105 transition duration-500"
+            >
+          </div>
+
+          <!-- Content -->
+          <div class="mt-4 flex flex-col flex-1 pb-1">
+
+            <h3 class="text-xl font-bold">PLIX</h3>
+
+            <p class="text-gray-700 mt-1 line-clamp-2">
+              PLIX Watermelon Hydrogel Under Eye Patches.
+            </p>
+
+            <p class="mt-3 text-gray-700">
+              ⭐ 4.8 (214 Reviews)
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Price: ₹749
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex items-center gap-4 mt-auto pt-6">
+
+              <button
+                onclick="window.location.href='cart.html'"
+                class="flex-1 bg-pink-600 hover:bg-pink-700 transition text-white py-3 rounded-xl font-semibold"
+              >
+                Add to cart
+              </button>
+
+              <button class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-pink-50 transition">
+                ❤️
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Duplicate More Cards -->
+        <div class="bg-white rounded-2xl border border-pink-100 shadow-md hover:shadow-xl transition p-4">
+          <div class="rounded-2xl overflow-hidden">
+            <img
+              src="Assets/Images/eye2.webp"
+              alt="Product"
+              class="w-full h-[220px] object-contain hover:scale-105 transition duration-500"
+            >
+          </div>
+
+          <div class="mt-4 flex flex-col flex-1 pb-1">
+            <h3 class="text-xl font-bold">Lakme</h3>
+
+            <p class="text-gray-700 mt-1">
+              Lakme Eye Makeup Set
+            </p>
+
+            <p class="mt-3 text-gray-700">
+              ⭐ 4.8 (214 Reviews)
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Price: ₹799
+            </p>
+
+            <div class="flex items-center gap-4 mt-auto pt-6">
+
+              <button
+                onclick="window.location.href='cart.html'"
+                class="flex-1 bg-pink-600 hover:bg-pink-700 transition text-white py-3 rounded-xl font-semibold"
+              >
+                Add to cart
+              </button>
+
+              <button class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-pink-50 transition">
+                ❤️
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="bg-white rounded-2xl border border-pink-100 shadow-md hover:shadow-xl transition p-4">
+
+          <div class="rounded-2xl overflow-hidden">
+            <img
+              src="Assets/Images/eye3.webp"
+              alt="Product"
+              class="w-full h-[220px] object-contain hover:scale-105 transition duration-500"
+            >
+          </div>
+
+          <div class="mt-4 flex flex-col flex-1 pb-1">
+
+            <h3 class="text-xl font-bold">Lakme</h3>
+
+            <p class="text-gray-700 mt-1">
+              Minimalist Eye Cream
+            </p>
+
+            <p class="mt-3 text-gray-700">
+              ⭐ 4.8 (214 Reviews)
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Price: ₹749
+            </p>
+
+            <div class="flex items-center gap-4 mt-auto pt-6">
+
+              <button
+                onclick="window.location.href='cart.html'"
+                class="flex-1 bg-pink-600 hover:bg-pink-700 transition text-white py-3 rounded-xl font-semibold"
+              >
+                Add to cart
+              </button>
+
+              <button class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-pink-50 transition">
+                ❤️
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Fourth Card  -->
+        <div class="bg-white rounded-2xl border border-pink-100 shadow-md hover:shadow-xl transition p-4">
+
+          <div class="rounded-2xl overflow-hidden">
+            <img
+              src="Assets/Images/eye4.webp"
+              alt="Product"
+              class="w-full h-[220px] object-contain hover:scale-105 transition duration-500"
+            >
+          </div>
+
+          <div class="mt-4 flex flex-col flex-1 pb-1">
+
+            <h3 class="text-xl font-bold">Mars</h3>
+
+            <p class="text-gray-700 mt-1">
+              Professional Waterproof HD Long Lasting Eye Makeup Smudge Proof Mascara with free flow Eyeliner Pack
+            </p>
+
+            <p class="mt-3 text-gray-700">
+              ⭐ 4.8 (214 Reviews)
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Price: ₹799
+            </p>
+
+            <div class="flex items-center gap-4 mt-auto pt-6">
+
+              <button
+                onclick="window.location.href='cart.html'"
+                class="flex-1 bg-pink-600 hover:bg-pink-700 transition text-white py-3 rounded-xl font-semibold"
+              >
+                Add to cart
+              </button>
+
+              <button class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-pink-50 transition">
+                ❤️
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Fifth Card  -->
+        <div class="bg-white rounded-2xl border border-pink-100 shadow-md hover:shadow-xl transition p-4">
+
+          <div class="rounded-2xl overflow-hidden">
+            <img
+              src="Assets/Images/eye5.webp"
+              alt="Product"
+              class="w-full h-[220px] object-contain hover:scale-105 transition duration-500"
+            >
+          </div>
+
+          <div class="mt-4 flex flex-col flex-1 pb-1">
+
+            <h3 class="text-xl font-bold">Velvet Intense</h3>
+
+            <p class="text-gray-700 mt-1">
+              Hydrogel Under Eye Patches
+            </p>
+
+            <p class="mt-3 text-gray-700">
+              ⭐ 4.8 (214 Reviews)
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Price: ₹849
+            </p>
+
+            <div class="flex items-center gap-4 mt-auto pt-6">
+
+              <button
+                onclick="window.location.href='cart.html'"
+                class="flex-1 bg-pink-600 hover:bg-pink-700 transition text-white py-3 rounded-xl font-semibold"
+              >
+                Add to cart
+              </button>
+
+              <button class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-pink-50 transition">
+                ❤️
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sixth Card  -->
+        <div class="bg-white rounded-2xl border border-pink-100 shadow-md hover:shadow-xl transition p-4 flex flex-col h-full">
+
+          <div class="rounded-2xl overflow-hidden">
+            <img
+              src="Assets/Images/eye6.webp"
+              alt="Product"
+              class="w-full h-[220px] object-contain hover:scale-105 transition duration-500"
+            >
+          </div>
+
+          <div class="mt-4 flex flex-col flex-1 pb-1">
+
+            <h3 class="text-xl font-bold">Nykaa</h3>
+
+            <p class="text-gray-700 mt-1">
+              Nykaa Eyes On Mel 10-in-1 Eyeshadow Palette
+            </p>
+
+            <p class="mt-3 text-gray-700">
+              ⭐ 4.8 (214 Reviews)
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Price: ₹799
+            </p>
+
+            <div class="flex items-center gap-4 mt-auto pt-6">
+
+              <button
+                onclick="window.location.href='cart.html'"
+                class="flex-1 bg-pink-600 hover:bg-pink-700 transition text-white py-3 rounded-xl font-semibold"
+              >
+                Add to cart
+              </button>
+
+              <button class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center hover:bg-pink-50 transition">
+                ❤️
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- View All -->
+      <div class="flex justify-end mt-10">
+        <button
+          onclick="window.location.href='shop.html'"
+          class="border border-pink-400 px-8 py-3 rounded-xl font-semibold hover:bg-pink-50 transition"
+        >
+          View all
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Beauty Register Section -->
+<section class="py-20 px-6 bg-gray-100">
+
+  <!-- Main Container -->
+  <div 
+    class="max-w-7xl mx-auto rounded-[40px] overflow-visible relative bg-cover bg-center"
+    style="background-image: url('Assets/Images/Rectangle 78.png');"
+  >
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center min-h-[500px] px-8 lg:px-16">
+
+      <!-- Left Side Images -->
+<div class="relative flex items-end justify-center h-full overflow-visible">
+
+  <!-- Ellipse Background -->
+  <img
+    src="Assets/Images/Ellipse 19.png"
+    alt="Ellipse"
+    class="w-[380px] lg:w-[450px] relative z-10"
+  >
+
+  <!-- Cream Girl Image -->
+  <img
+    src="Assets/Images/applycreamgirl.png"
+    alt="Apply Cream Girl"
+    class="absolute bottom-0 z-20 w-[420px] lg:w-[520px] object-contain scale-x-[-1]"
+  >
+
+</div>
+
+
+      <!-- Right Side Content -->
+      <div class="py-16 lg:py-0 relative z-30">
+
+        <!-- Heading -->
+        <h1 class="text-2xl lg:text-4xl text-white leading-tight">
+          Join our Beauty Circle
+        </h1>
+
+        <!-- Paragraph -->
+        <p class="mt-6 text-lg lg:text-2xl text-white leading-relaxed max-w-xl">
+          Be the first to know about new arrivals, exclusive discounts, and special flash sales.
+        </p>
+
+        <!-- Input + Button -->
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+
+          <!-- Email Input -->
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="flex-1 px-6 py-4 rounded-2xl text-lg outline-none shadow-md"
+          >
+
+          <!-- Register Button -->
+          <button
+            onclick="window.location.href='login.html'"
+            class="bg-pink-600 hover:bg-pink-700 transition text-white text-lg font-semibold px-8 py-4 rounded-2xl shadow-lg"
+          >
+            Register
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER (SAME AS INDEX) ================= -->
+<footer 
+  class="relative py-15 min-h-[350px] flex items-end bg-[url('./Assets/Images/footer.png')] bg-cover bg-center bg-no-repeat" 
+  id="contact"
+>
+  <div class="max-w-6xl mx-auto px-4 w-full">
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-10">
+
+      <div class="flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+          <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" class="w-55"/>
+        </div>
+        <p class="text-white text-xs">
+          3rd Floor, Valasaravakam,<br/>Chennai – 600800
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Quick Links</h4>
+        <ul class="text-white text-xs space-y-2">
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="index.html#offers">Offers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Support</h4>
+        <ul class="text-white text-xs space-y-2">
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Social</h4>
+        <div class="flex gap-3">
+          <img src="Assets/Images/facebook.png">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="./Assets/JS/script.js"></script>
+
+</body>
+</html>

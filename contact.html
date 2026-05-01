@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glowify – Where Luxury Meets Skin Science</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "Inter", "Arial", "sans-serif"],
+          },
+          colors: {
+            glow: {
+              pink: "#f81f7f",
+              light: "#fff2f8",
+              soft: "#f7d9e8",
+            },
+          },
+          boxShadow: {
+            glow: "0 12px 24px rgba(0, 0, 0, 0.16)",
+            soft: "0 8px 18px rgba(0, 0, 0, 0.12)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="/Assets/CSS/style.css">
+</head>
+<body class="overflow-x-hidden">
+
+<!-- ========== STICKY HEADER ========== -->
+<header id="main-header" class="bg-white border-b border-pink-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+    <!-- Logo -->
+    <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" alt="Logo" class="w-16 h-auto"/>
+
+    <!-- Search -->
+    <div class="flex-1 max-w-xs hidden sm:block">
+      <div class="flex items-center bg-pink-50 rounded-full px-4 py-2 gap-2 border border-pink-100">
+        <svg class="w-4 h-4 text-pink-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search lipsticks…" class="bg-transparent outline-none text-sm text-gray-500 w-full placeholder-pink-300"/>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 flex-1 justify-center">
+      <a href="index.html" class="nav-link hover:text-pink-600">Home</a>
+      <!-- Shop Menu -->
+      <div class="relative inline-block">
+
+        <!-- Shop Link -->
+        <button 
+          id="shopBtn"
+          class="nav-link hover:text-pink-600"
+        >
+          Shop
+        </button>
+
+        <!-- Dropdown -->
+        <div 
+        id="shopDropdown"
+        class="hidden absolute top-12 left-0 w-72 bg-white rounded-xl shadow-2xl p-4 z-50"
+      >
+
+          <!-- Heading -->
+          <h2 class="text-xl font-semibold mb-6">Category</h2>
+
+          <!-- Menu Items -->
+          <div class="space-y-1">
+
+            <!-- Item -->
+            <a 
+              href="eyemakeup.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Eye Makeup
+              <span>›</span>
+            </a>
+
+            <a 
+              href="fragrance.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Fragrance
+              <span>›</span>
+            </a>
+
+            <a 
+              href="haircare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Hair Care
+              <span>›</span>
+            </a>
+
+            <a 
+              href="lipsticks.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Lipsticks
+              <span>›</span>
+            </a>
+
+            <a 
+              href="nails.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Nails
+              <span>›</span>
+            </a>
+
+            <a 
+              href="skincare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Skincare
+              <span>›</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <a href="offers.html" class="nav-link hover:text-pink-600">Offers</a>
+      <a href="about.html" class="nav-link hover:text-pink-600">About</a>
+      <a href="contact.html" class="nav-link hover:text-pink-600">Contact</a>
+    </nav>
+
+    <!-- Icons -->
+     <div class="flex items-center gap-3 ml-auto">
+      <a href="cart.html">
+      <button class="relative p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="absolute top-0.5 right-0.5 w-4 h-4 text-xs bg-pink-500 text-white rounded-full flex items-center justify-center">2</span>
+      </button>
+      </a>
+      <a href="wishlist.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      </a>
+      <a href="login.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+
+  <main>
+    <section class="relative h-[226px] overflow-hidden">
+
+  <!-- FULL BACKGROUND IMAGE -->
+  <img src="Assets/Images/contacthero.png"
+       alt=""
+       class="absolute inset-0 w-full h-full object-cover" />
+
+  <!-- OPTIONAL OVERLAY (for better text visibility) -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- TEXT CONTENT -->
+  <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 text-white">
+    
+    <div class="max-w-xl">
+      <h1 class="text-3xl font-bold md:text-[30px]">
+        Get In Touch
+      </h1>
+
+      <p class="mt-4 text-base leading-6 md:text-lg">
+        Whether you have a question about our formulas or your
+        <br class="hidden sm:block" />
+        recent order, our beauty experts are here to help.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <section class="mx-auto grid max-w-[1120px] gap-10 px-6 py-12 lg:grid-cols-[1.12fr_.96fr]">
+      <form class="rounded-lg bg-white p-8 shadow-glow">
+        <h2 class="text-lg font-medium">Send a Message</h2>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2">
+          <label class="block text-sm font-medium">
+            Full Name
+            <input class="mt-2 h-9 w-full rounded-md border border-gray-300 px-4 text-sm text-gray-700 outline-none focus:border-glow-pink" placeholder="e.g Narmatha" />
+          </label>
+          <label class="block text-sm font-medium">
+            Email Id
+            <input type="email" class="mt-2 h-9 w-full rounded-md border border-gray-300 px-4 text-sm text-gray-700 outline-none focus:border-glow-pink" placeholder="nar@gmail.com" />
+          </label>
+          <label class="block text-sm font-medium sm:col-span-1">
+            Mobile No
+            <input class="mt-2 h-9 w-full rounded-md border border-gray-300 px-4 text-sm text-gray-700 outline-none focus:border-glow-pink" placeholder="Enter mobile number" />
+          </label>
+          <label class="block text-sm font-medium sm:col-span-2">
+            Message
+            <textarea class="mt-2 h-11 w-full resize-none rounded-md border border-gray-300 px-4 py-3 text-sm text-gray-700 outline-none focus:border-glow-pink" placeholder="Type here.."></textarea>
+          </label>
+        </div>
+        <button type="button" class="mt-9 h-9 w-28 rounded-lg bg-glow-pink text-sm font-semibold text-white shadow-soft transition hover:bg-pink-600">
+          Send
+        </button>
+      </form>
+
+      <aside class="space-y-10">
+        <div class="rounded-lg bg-white p-6 shadow-glow">
+          <h2 class="text-lg font-medium">Customer Services</h2>
+          <div class="mt-6 space-y-7">
+            <div class="flex items-center gap-5">
+              <span class="grid h-12 w-12 place-items-center rounded-md bg-yellow-300 text-pink-600">
+                <img src="./Assets/Images/mailicon.gif" class="h-18 w-18"/>
+                
+              </span>
+              <div>
+                <p class="text-sm font-medium">Email Us</p>
+                <p class="text-xs">supportglowify@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <span class="grid h-14 w-14 place-items-center rounded-full bg-blue-100 text-blue-600">
+                <img src="./Assets/Images/callicon.gif" class="h-18 w-18"/>
+              </span>
+              <div>
+                <p class="text-sm font-medium">Call Us</p>
+                <p class="text-xs">+91-1234567890</p>
+                <p class="text-xs">+91-1234567890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="trackorder.html" class="flex h-[50px] items-center justify-between rounded-lg bg-white px-6 text-base shadow-soft">
+          <span>Track You Order</span>
+          <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-black">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+              <path d="m9 5 7 7-7 7"></path>
+            </svg>
+          </span>
+        </a>
+
+        <a href="#" class="flex h-[50px] items-center justify-between rounded-lg bg-white px-6 text-base shadow-soft">
+          <span>Cancel Order</span>
+          <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-black">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+              <path d="m9 5 7 7-7 7"></path>
+            </svg>
+          </span>
+        </a>
+      </aside>
+    </section>
+
+    <section class="mx-auto max-w-[800px] px-6 pb-36 text-center">
+      <h2 class="text-xl font-semibold">Frequently Asked Questions</h2>
+      <div class="mt-5 space-y-5 text-left">
+        <details class="group rounded-lg bg-gray-100 px-5 py-3">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium">
+            1. Is Cream Luxe Finish lipstick long-lasting?
+            <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">Yes, it is designed for comfortable, lasting wear.</p>
+        </details>
+        <details class="group rounded-lg bg-gray-100 px-5 py-3">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium">
+            2. Is it matte or glossy?
+            <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">It has a luxe cream finish with a soft shine.</p>
+        </details>
+        <details class="group rounded-lg bg-gray-100 px-5 py-3">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium">
+            3. Does it dry out lips?
+            <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">No, the creamy formula keeps lips feeling smooth.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+<!-- ================= FOOTER (SAME AS INDEX) ================= -->
+<footer 
+  class="relative py-15 min-h-[350px] flex items-end bg-[url('./Assets/Images/footer.png')] bg-cover bg-center bg-no-repeat" 
+  id="contact"
+>
+  <div class="max-w-6xl mx-auto px-4 w-full">
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-10">
+
+      <div class="flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+          <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" class="w-55"/>
+        </div>
+        <p class="text-white text-xs">
+          3rd Floor, Valasaravakam,<br/>Chennai – 600800
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Quick Links</h4>
+        <ul class="text-white text-xs space-y-2">
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="index.html#offers">Offers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Support</h4>
+        <ul class="text-white text-xs space-y-2">
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Social</h4>
+        <div class="flex gap-3">
+          <img src="Assets/Images/facebook.png">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="./Assets/JS/script.js"></script>
+
+</body>
+</html>

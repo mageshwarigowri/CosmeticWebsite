@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Glowify</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="/Assets/CSS/style.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+<!-- ================= HEADER (SAME AS INDEX) ================= -->
+<header id="main-header" class="bg-white border-b border-pink-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+
+    <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" class="w-16"/>
+
+    <div class="flex-1 max-w-xs hidden sm:block">
+      <div class="flex items-center bg-pink-50 rounded-full px-4 py-2 gap-2 border border-pink-100">
+        <input type="text" placeholder="Search lipsticks…" class="bg-transparent outline-none text-sm w-full"/>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 flex-1 justify-center">
+      <a href="index.html" class="nav-link hover:text-pink-600">Home</a>
+      <!-- Shop Menu -->
+      <div class="relative inline-block">
+
+        <!-- Shop Link -->
+        <button 
+          id="shopBtn"
+          class="nav-link hover:text-pink-600"
+        >
+          Shop
+        </button>
+
+        <!-- Dropdown -->
+        <div 
+        id="shopDropdown"
+        class="hidden absolute top-12 left-0 w-72 bg-white rounded-xl shadow-2xl p-4 z-50"
+      >
+
+          <!-- Heading -->
+          <h2 class="text-xl font-semibold mb-6">Category</h2>
+
+          <!-- Menu Items -->
+          <div class="space-y-1">
+
+            <!-- Item -->
+            <a 
+              href="eyemakeup.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Eye Makeup
+              <span>›</span>
+            </a>
+
+            <a 
+              href="fragrance.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Fragrance
+              <span>›</span>
+            </a>
+
+            <a 
+              href="haircare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Hair Care
+              <span>›</span>
+            </a>
+
+            <a 
+              href="lipsticks.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Lipsticks
+              <span>›</span>
+            </a>
+
+            <a 
+              href="nails.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Nails
+              <span>›</span>
+            </a>
+
+            <a 
+              href="skincare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Skincare
+              <span>›</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <a href="offers.html" class="nav-link hover:text-pink-600">Offers</a>
+      <a href="about.html" class="nav-link hover:text-pink-600">About</a>
+      <a href="contact.html" class="nav-link hover:text-pink-600">Contact</a>
+    </nav>
+
+     <div class="flex items-center gap-3 ml-auto">
+      <a href="cart.html">
+      <button class="relative p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="absolute top-0.5 right-0.5 w-4 h-4 text-xs bg-pink-500 text-white rounded-full flex items-center justify-center">2</span>
+      </button>
+      </a>
+      <a href="wishlist.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      </a>
+      <a href="login.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="py-20 text-center bg-[url('./Assets/Images/abouthero.png')] bg-cover">
+  <div class="max-w-6xl mx-auto mt-6 px-6 py-4 bg-gray-500/40 rounded-xl backdrop-blur-sm reveal">
+  <h1 class="serif text-4xl md:text-5xl font-bold text-gray-800 mb-4 reveal">
+    The Art of Radiant Skin
+  </h1>
+  
+  <p class="text-gray-700 text-center">
+    The legacy of timeless beauty and scientific precision, crafted for the modern connoisseur.
+  </p>
+</div>
+</section>
+
+
+<!-- ================= OUR STORY ================= -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- TEXT FIRST -->
+    <div class="reveal order-2 md:order-1">
+      <h2 class="serif text-3xl font-bold mb-4">Our Story</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        At Glowify, beauty is more than makeup — it’s confidence, self-expression, and self-love.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        We create high-quality, skin-friendly cosmetics designed to enhance your natural glow using premium ingredients and modern innovation.
+      </p>
+
+      <h2 class="serif text-3xl font-bold mb-4 mt-6">Our Mission</h2>
+      <p class="text-gray-600">
+        To make beauty accessible, empowering, and effortless for everyone — across all skin tones and styles.
+      </p>
+    </div>
+
+    <!-- IMAGE SECOND -->
+    <img src="./Assets/Images/threegirls.png"
+         class="rounded-2xl border-none bg-transparent shadow-lg reveal order-1 md:order-2"/>
+
+  </div>
+</section>
+
+
+<!-- ================= VALUES ================= -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <h2 class="serif text-3xl text-center font-bold mb-12 ">Our Core Values</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="product-card text-center rounded-2xl reveal 
+            bg-[url('./Assets/Images/arch.png')] 
+            bg-no-repeat bg-center bg-contain
+            px-6 py-16 text-white">
+        <img src="./Assets/Images/crown.gif" class="w-16 mx-auto mb-4"/>
+        <h3 class="font-semibold text-lg mb-2">Premium Quality</h3>
+        <p class="text-sm text-white/80 break-words leading-relaxed max-w-[220px] mx-auto">High-performance products with skin-loving ingredients.</p>
+      </div>
+
+      <div class="product-card text-center rounded-2xl reveal 
+            bg-[url('./Assets/Images/arch.png')] 
+            bg-no-repeat bg-center bg-contain
+            px-6 py-16 text-white">
+        <img src="./Assets/Images/heart.gif" class="w-16 mx-auto mb-4"/>
+        <h3 class="font-semibold text-lg mb-2">Empowered Confidence</h3>
+        <p class="text-sm text-white/80 break-words leading-relaxed max-w-[220px] mx-auto">Celebrating individuality through every shade.</p>
+      </div>
+
+      <div class="product-card text-center rounded-2xl reveal 
+            bg-[url('./Assets/Images/arch.png')] 
+            bg-no-repeat bg-center bg-contain
+            px-6 py-16 text-white">
+        <img src="./Assets/Images/leaf.gif" class="w-16 mx-auto mb-4"/>
+        <h3 class="font-semibold text-lg mb-2">Ethical Beauty</h3>
+        <p class="text-sm text-white/80 break-words leading-relaxed max-w-[220px] mx-auto">Cruelty-free and sustainably crafted products.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FOUNDER ================= -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+<img src="./Assets/Images/founder.avif" class="rounded-2xl shadow-lg reveal w-45 mx-auto mb-4"/>
+    <div class="reveal">
+      <h2 class="serif text-3xl font-bold mb-4">Meet the Founder</h2>
+      <p class="text-gray-600 mb-4">
+        Behind every shade, there is a story.
+      </p>
+      <p class="text-gray-600">
+        Behind every shade, there is a story.
+Elena started this brand with a simple vision -- to create beauty products that combine luxury, performance, and confidence. With a passion for skincare and makeup innovation, she believed that every woman deserves products that enhance natural beauty without compromise.
+What began as a dream soon become a mission:
+To design high-quality, cruelty-free cosmetics that empower individuals to express themselves fearlessly.
+Her dedication to excellence, detail, and modern beauty trends continues to shape every product we create.
+
+      </p>
+    </div>
+
+    
+
+  </div>
+</section>
+
+
+<!-- ================= COMMITMENT ================= -->
+<section class="py-16">
+  <div class="max-w-4xl mx-auto px-6 py-10 bg-pink-100 rounded-2xl text-center">
+
+    <h2 class="serif text-3xl font-bold mb-4">
+      Our Unwavering Commitment
+    </h2>
+
+    <p class="text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
+      At our code, we are dedicated to delivering beauty without compromise.
+      We are committed to creating high-quality, skin-friendly products that combine innovation, safety, and performance.
+      Every formula is thoughtfully developed to ensure comfort, long-lasting wear, and visible results.
+    </p>
+
+    <button class="btn-pink px-8 py-3">
+      View Sustainability Report
+    </button>
+
+  </div>
+</section>
+
+
+<!-- ================= FOOTER (SAME AS INDEX) ================= -->
+<footer 
+  class="relative py-15 min-h-[350px] flex items-end bg-[url('./Assets/Images/footer.png')] bg-cover bg-center bg-no-repeat" 
+  id="contact"
+>
+  <div class="max-w-6xl mx-auto px-4 w-full">
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-10">
+
+      <div class="flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+          <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" class="w-55"/>
+        </div>
+        <p class="text-white text-xs">
+          3rd Floor, Valasaravakam,<br/>Chennai – 600800
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Quick Links</h4>
+        <ul class="text-white text-xs space-y-2">
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="index.html#offers">Offers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Support</h4>
+        <ul class="text-white text-xs space-y-2">
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase">Social</h4>
+        <div class="flex gap-3">
+          <img src="Assets/Images/facebook.png">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="./Assets/JS/script.js"></script>
+
+</body>
+</html>

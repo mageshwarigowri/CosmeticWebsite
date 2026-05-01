@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glowify – Where Luxury Meets Skin Science</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="/Assets/CSS/style.css">
+</head>
+<body class="overflow-x-hidden">
+
+<!-- ========== STICKY HEADER ========== -->
+<header id="main-header" class="bg-white border-b border-pink-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+    <!-- Logo -->
+    <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" alt="Logo" class="w-16 h-auto"/>
+
+    <!-- Search -->
+    <div class="flex-1 max-w-xs hidden sm:block">
+      <div class="flex items-center bg-pink-50 rounded-full px-4 py-2 gap-2 border border-pink-100">
+        <svg class="w-4 h-4 text-pink-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search lipsticks…" class="bg-transparent outline-none text-sm text-gray-500 w-full placeholder-pink-300"/>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 flex-1 justify-center">
+      <a href="index.html" class="nav-link hover:text-pink-600">Home</a>
+      <!-- Shop Menu -->
+      <div class="relative inline-block">
+
+        <!-- Shop Link -->
+        <button 
+          id="shopBtn"
+          class="nav-link hover:text-pink-600"
+        >
+          Shop
+        </button>
+
+        <!-- Dropdown -->
+        <div 
+        id="shopDropdown"
+        class="hidden absolute top-12 left-0 w-72 bg-white rounded-xl shadow-2xl p-4 z-50"
+      >
+
+          <!-- Heading -->
+          <h2 class="text-xl font-semibold mb-6">Category</h2>
+
+          <!-- Menu Items -->
+          <div class="space-y-1">
+
+            <!-- Item -->
+            <a 
+              href="eyemakeup.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Eye Makeup
+              <span>›</span>
+            </a>
+
+            <a 
+              href="fragrance.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Fragrance
+              <span>›</span>
+            </a>
+
+            <a 
+              href="haircare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Hair Care
+              <span>›</span>
+            </a>
+
+            <a 
+              href="lipsticks.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Lipsticks
+              <span>›</span>
+            </a>
+
+            <a 
+              href="nails.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Nails
+              <span>›</span>
+            </a>
+
+            <a 
+              href="skincare.html"
+              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
+            >
+              Skincare
+              <span>›</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <a href="offers.html" class="nav-link hover:text-pink-600">Offers</a>
+      <a href="about.html" class="nav-link hover:text-pink-600">About</a>
+      <a href="contact.html" class="nav-link hover:text-pink-600">Contact</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="flex items-center gap-3 ml-auto">
+      <a href="cart.html">
+      <button class="relative p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="absolute top-0.5 right-0.5 w-4 h-4 text-xs bg-pink-500 text-white rounded-full flex items-center justify-center">2</span>
+      </button>
+      </a>
+      <a href="wishlist.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      </a>
+      <a href="login.html">
+      <button class="p-2 hover:bg-pink-50 rounded-full transition">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO / BANNER ========== -->
+<section id="home" class="relative w-full h-[400px] overflow-hidden">
+
+  <!-- Slides -->
+  <div id="slider" class="flex h-full transition-transform duration-700">
+
+    <!-- Slide 1 -->
+    <div class="w-full h-full flex-shrink-0 p-4 overflow-hidden rounded-2xl">
+      <img src="./Assets/Images/Hero1.png" 
+           class="w-full h-full object-cover object-center">
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="w-full h-full flex-shrink-0 p-4 overflow-hidden rounded-2xl">
+      <img src="./Assets/Images/Hero2.png" 
+           class="w-full h-full object-cover object-center">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="w-full h-full flex-shrink-0 p-4 overflow-hidden rounded-2xl">
+      <img src="./Assets/Images/Hero3.png" 
+           class="w-full h-full object-cover object-center">
+    </div>
+
+  </div>
+
+  <!-- Left Arrow -->
+  <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">
+    ❮
+  </button>
+
+  <!-- Right Arrow -->
+  <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">
+    ❯
+  </button>
+
+</section>
+
+<!-- ========== ABOUT / BRAND ========== -->
+<section class="w-full py-16 bg-gray-100">
+  <h2 class="text-2xl font-semibold text-center mb-10">
+    Where Luxury Meets Skin Science
+  </h2>
+
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-10">
+
+    <!-- Image Container -->
+    <div class="relative w-[500px] h-[250px]">
+
+      <!-- Image 1 -->
+      <img id="img1"
+        src="./Assets/Images/pngtree-cosmetics-lipsticks-bottles-on-a-pink-background-image_2648532.jpg"
+        class="absolute left-0 top-0 w-[300px] h-full object-cover rounded-2xl shadow-lg transition-all duration-700"
+      >
+
+      <!-- Image 2 -->
+      <img id="img2"
+        src="./Assets/Images/elegant-young-woman-radiant-complexion-600nw-2681647915.webp"
+        class="absolute left-[150px] top-[40px] w-[300px] h-full object-cover rounded-2xl shadow-xl transition-all duration-700"
+      >
+
+    </div>
+
+    <!-- Text -->
+    <div class="max-w-md text-gray-700 leading-relaxed">
+      <p>
+        At Glowify, we believe oily skin deserves premium care. Our dermatologist-tested formula blends advanced ingredients with elegant skincare innovation — giving you confidence without compromise.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== INGREDIENTS ========== -->
+<section class="w-full py-16 bg-gray-100 overflow-hidden">
+
+  <div class="max-w-6xl mx-auto overflow-hidden">
+
+    <!-- Slider Track -->
+    <div class="flex animate-scroll">
+
+      <!-- ===== ORIGINAL CARDS ===== -->
+
+      <!-- Card 1 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p1.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Charcoal Complex</h3>
+            <p class="text-sm text-gray-600">Deep cleanses pores and removes impurities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p2.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Hyaluronic Acid</h3>
+            <p class="text-sm text-gray-600">Provides hydration without heaviness.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p3.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Vitamin C</h3>
+            <p class="text-sm text-gray-600">Brightens skin.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p4.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Aloe Vera</h3>
+            <p class="text-sm text-gray-600">Soothes skin.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== DUPLICATE FOR SMOOTH LOOP ===== -->
+
+      <!-- Card 1 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p1.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Charcoal Complex</h3>
+            <p class="text-sm text-gray-600">Deep cleanses pores and removes impurities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p2.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Hyaluronic Acid</h3>
+            <p class="text-sm text-gray-600">Provides hydration without heaviness.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p3.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Vitamin C</h3>
+            <p class="text-sm text-gray-600">Brightens skin.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="w-1/2 p-3 flex-none">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="./Assets/Images/p4.png" class="w-full h-[220px] object-cover">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg">Aloe Vera</h3>
+            <p class="text-sm text-gray-600">Soothes skin.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========== FEATURED PRODUCTS ========== -->
+<section class="py-16 bg-white" id="shop">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10 reveal">
+      <h2 class="serif text-3xl md:text-4xl font-bold text-gray-800 section-title">Featured Products</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+
+      <!-- Card -->
+       <div class="product-card bg-white rounded-2xl border border-pink-100 p-5 flex flex-col reveal">   
+      <img src="./Assets/Images/1.png " alt="">
+        <h3 class="font-semibold text-gray-800 mb-1">Glow Matte Lipstick – Rose Bliss</h3>
+        <p class="text-gray-400 text-xs mb-2">Ultra-smooth matte finish with 12-hour long wear.</p>
+        <div class="flex items-center gap-1 mb-3">
+          <span class="star">★★★★★</span>
+          <span class="text-xs text-gray-400">4.8 (214 Reviews)</span>
+        </div>
+        <div class="flex items-center justify-between mt-auto">
+          <span class="text-lg font-bold" style="color:#e8407a">₹799</span>
+          <button class="btn-pink px-5 py-1.5 text-xs">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="product-card bg-white rounded-2xl border border-pink-100 p-5 flex flex-col reveal">
+       <img src="./Assets/Images/2.png" alt="">
+        <h3 class="font-semibold text-gray-800 mb-1">Radiant Glow Serum</h3>
+        <p class="text-gray-400 text-xs mb-2">Brightens skin and boosts natural glow.</p>
+        <div class="flex items-center gap-1 mb-3">
+          <span class="star">★★★★★</span>
+          <span class="text-xs text-gray-400">4.7 (168 Reviews)</span>
+        </div>
+        <div class="flex items-center justify-between mt-auto">
+          <span class="text-lg font-bold" style="color:#e8407a">₹1,299</span>
+          <button class="btn-pink px-5 py-1.5 text-xs">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="product-card bg-white rounded-2xl border border-pink-100 p-5 flex flex-col reveal">
+        <img src="./Assets/Images/3.png" alt="">
+        <h3 class="font-semibold text-gray-800 mb-1">Velvet Touch Foundation</h3>
+        <p class="text-gray-400 text-xs mb-2">Lightweight coverage with flawless finish.</p>
+        <div class="flex items-center gap-1 mb-3">
+          <span class="star">★★★★★</span>
+          <span class="text-xs text-gray-400">4.6 (214 Reviews)</span>
+        </div>
+        <div class="flex items-center justify-between mt-auto">
+          <span class="text-lg font-bold" style="color:#e8407a">₹1,099</span>
+          <button class="btn-pink px-5 py-1.5 text-xs">Add to cart</button>
+        </div>
+      </div>
+      <div class="product-card bg-white rounded-2xl border border-pink-100 p-5 flex flex-col reveal">
+        <img src="./Assets/Images/4.png" alt="">
+        <h3 class="font-semibold text-gray-800 mb-1">Blush & Bloom Cheek Tint</h3>
+        <p class="text-gray-400 text-xs mb-2">Natural rosy tint for fresh everyday look.</p>
+        <div class="flex items-center gap-1 mb-3">
+          <span class="star">★★★★★</span>
+          <span class="text-xs text-gray-400">4.9 (97 Reviews)</span>
+        </div>
+        <div class="flex items-center justify-between mt-auto">
+          <span class="text-lg font-bold" style="color:#e8407a">₹699</span>
+          <button class="btn-pink px-5 py-1.5 text-xs">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="product-card bg-white rounded-2xl border border-pink-100 p-5 flex flex-col reveal">
+        <img src="./Assets/Images/5.png" alt="">
+        <h3 class="font-semibold text-gray-800 mb-1">Luxe Shine Lip Gloss – Crystal Pink</h3>
+        <p class="text-gray-400 text-xs mb-2">Non-sticky gloss with high-shine finish and nourishing formula.</p>
+        <div class="flex items-center gap-1 mb-3">
+          <span class="star">★★★★★</span>
+          <span class="text-xs text-gray-400">4.7 (186 Reviews)</span>
+        </div>
+        <div class="flex items-center justify-between mt-auto">
+          <span class="text-lg font-bold" style="color:#e8407a">₹749</span>
+          <button class="btn-pink px-5 py-1.5 text-xs">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="product-card bg-white rounded-2xl border border-pink-100 p-5 flex flex-col reveal">
+        <img src="./Assets/Images/6.png" alt="">
+        <h3 class="font-semibold text-gray-800 mb-1">Hydrating Glow Face Mist</h3>
+        <p class="text-gray-400 text-xs mb-2">Refreshes, hydrates, and sets makeup for all-day glow.</p>
+        <div class="flex items-center gap-1 mb-3">
+          <span class="star">★★★★★</span>
+          <span class="text-xs text-gray-400">4.8 (132 Reviews)</span>
+        </div>
+        <div class="flex items-center justify-between mt-auto">
+          <span class="text-lg font-bold" style="color:#e8407a">₹599</span>
+          <button class="btn-pink px-5 py-1.5 text-xs">Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== TOP CATEGORIES ========== -->
+<section class="py-14 relative" style="background:#fff5f8">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <div class="text-center mb-10">
+      <h2 class="serif text-3xl font-bold text-gray-800">Top Categories</h2>
+    </div>
+
+    <!-- Slider Wrapper -->
+    <div class="relative overflow-hidden">
+
+      <!-- Slider Track -->
+      <div id="categorySlider" class="flex transition-transform duration-500">
+
+        <!-- Each card = 25% width (4 visible) -->
+        
+        <div class="w-1/4 p-2 flex-shrink-0">
+          <div class="cat-card bg-white rounded-2xl border p-6 text-center">
+            <img src="./Assets/Images/c1.png" class="mx-auto mb-3 transition-transform duration-500 hover:scale-x-[-1]">
+            <h3 class="font-semibold text-sm">Lipsticks</h3>
+            <p class="text-xs text-gray-400">Vibrant & Bold Color</p>
+            <a href="lipsticks.html"><button class="btn-pink px-5 py-1.5 text-xs">Shop Now</button></a>
+        </div>
+        </div>
+
+        <div class="w-1/4 p-2 flex-shrink-0">
+          <div class="cat-card bg-white rounded-2xl border p-6 text-center">
+            <img src="./Assets/Images/c2.png" class="mx-auto mb-3 transition-transform duration-500 hover:scale-x-[-1]">
+            <h3 class="font-semibold text-sm">Skincare</h3>
+            <p class="text-xs text-gray-400">Hydrating essentials </p>
+            <a href="skincare.html"><button class="btn-pink px-5 py-1.5 text-xs">Shop Now</button></a>
+          </div>
+        </div>
+
+        <div class="w-1/4 p-2 flex-shrink-0">
+          <div class="cat-card bg-white rounded-2xl border p-6 text-center">
+            <img src="./Assets/Images/c3.png" class="mx-auto mb-3 transition-transform duration-500 hover:scale-x-[-1]">
+            <h3 class="font-semibold text-sm">Eye Makeup</h3>
+            <p class="text-xs text-gray-400">Shadows & liners</p>
+            <a href="eyemakeup.html"><button class="btn-pink px-5 py-1.5 text-xs">Shop Now</button></a>
+          </div>
+        </div>
+
+        <div class="w-1/4 p-2 flex-shrink-0">
+          <div class="cat-card bg-white rounded-2xl border p-6 text-center">
+            <img src="./Assets/Images/c4.png" class="mx-auto mb-3 transition-transform duration-500 hover:scale-x-[-1]">
+            <h3 class="font-semibold text-sm">Hair Care</h3>
+            <p class="text-xs text-gray-400">Shampooes & oils</p>
+            <a href="haircare.html"><button class="btn-pink px-5 py-1.5 text-xs">Shop Now</button></a>
+          </div>
+        </div>
+
+        <!-- Remaining items -->
+        <div class="w-1/4 p-2 flex-shrink-0">
+          <div class="cat-card bg-white rounded-2xl border p-6 text-center">
+            <img src="./Assets/Images/c5.png" class="mx-auto mb-3 transition-transform duration-500 hover:scale-x-[-1]">
+            <h3 class="font-semibold text-sm">Fragrance</h3>
+            <p class="text-xs text-gray-400">Luxcurious Scents</p>
+            <a href="fragrance.html"><button class="btn-pink px-5 py-1.5 text-xs">Shop Now</button></a>
+          </div>
+        </div>
+
+        <div class="w-1/4 p-2 flex-shrink-0">
+          <div class="cat-card bg-white rounded-2xl border p-6 text-center">
+            <img src="./Assets/Images/c6.png" class="mx-auto mb-3 transition-transform duration-500 hover:scale-x-[-1]">
+            <h3 class="font-semibold text-sm">Nails</h3>
+            <p class="text-xs text-gray-400">Polish & Manicure</p>
+            <a href="nails.html"><button class="btn-pink px-5 py-1.5 text-xs">Shop Now</button></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Arrows -->
+      <button id="prevCat" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-2 rounded-full">❮</button>
+      <button id="nextCat" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-2 rounded-full">❯</button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== WHY GLOWIFY ========== -->
+<section class="py-16 bg-gray-100">
+  <h2 class="text-center text-3xl font-semibold mb-12">Why Glowify</h2>
+
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-10">
+
+    <!-- LEFT IMAGE -->
+    <div class="relative w-[350px] h-[350px] flex items-center justify-center">
+
+      <!-- Rotating Background -->
+      <img 
+      src="./Assets/Images/Union.png" 
+    class="absolute w-full h-full object-contain animate-spin-slow"
+  >
+
+      <!-- Person Image -->
+      <img 
+  src="./Assets/Images/ChatGPT Image Feb 23, 2026, 11_02_27 AM.png"
+  class="relative z-30 w-full h-full object-cover scale-80"
+>
+    </div>
+
+
+    <!-- RIGHT CONTENT -->
+    <div class="flex flex-col gap-6 w-full max-w-lg">
+
+      <div class="feature-box active">01 Clean Beauty Promise</div>
+      <div class="feature-box">02 Proven Results</div>
+      <div class="feature-box">03 Expert Formulated</div>
+      <div class="feature-box">04 Sustainable Beauty</div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials">
+  <div class="container">
+
+    <h2 class="title">Happy Customers</h2>
+
+    <div class="slider-wrapper">
+      <div class="slider" id="testiSlider">
+
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-inner">
+            <img src="./Assets/Images/Priya.webp" class="dp">
+
+            <div class="stars">★★★★★</div>
+
+            <p class="review">
+              "Finally, a premium cream that actually controls my oil without drying my skin."
+            </p>
+
+            <div class="user">
+              <p class="name">Priya S.</p>
+              <p class="location">Chennai</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-inner">
+            <img src="./Assets/Images/Ananya.jpg" class="dp">
+
+            <div class="stars">★★★★★</div>
+
+            <p class="review">
+              "The Radiant Glow Serum transformed my skin in just 2 weeks!"
+            </p>
+
+            <div class="user">
+              <p class="name">Ananya R.</p>
+              <p class="location">Bangalore</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Arrows -->
+      <button id="prevBtn" class="arrow left">❮</button>
+      <button id="nextBtn" class="arrow right">❯</button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="newsletter-bg py-16 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2220%22 cy=%2220%22 r=%2215%22 fill=%22white%22/><circle cx=%2280%22 cy=%2280%22 r=%2215%22 fill=%22white%22/><circle cx=%2280%22 cy=%2220%22 r=%228%22 fill=%22white%22/></svg>'); background-size: 120px;"></div>
+  <div class="max-w-2xl mx-auto px-4 text-center relative z-10 reveal">
+    <p class="text-pink-200 uppercase tracking-widest text-xs font-semibold mb-2">Exclusive Access</p>
+    <h2 class="serif text-3xl font-bold text-white mb-3">Join The Inner Circle</h2>
+    <p class="text-pink-100 mb-7 text-sm">Sign up to receive early access to new launches, exclusive offers and skincare tips.</p>
+    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input type="email" placeholder="Enter Your Email" class="flex-1 px-5 py-3 rounded-full outline-none text-sm text-gray-700 placeholder-gray-400 shadow"/>
+      <button class="bg-white font-semibold text-sm px-7 py-3 rounded-full shadow transition hover:bg-pink-50" style="color:#e8407a">Register</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FLASH SALE BANNER ========== -->
+
+
+<section class="relative overflow-hidden py-16 px-4">
+<!-- =========================================================
+     FIREWORK PARTICLES
+========================================================= -->
+
+<div class="absolute inset-0 overflow-hidden pointer-events-none z-30">
+  
+
+  <!-- LEFT EXPLOSION -->
+  <div class="firework small pink top-[45%] left-[18%]"
+       style="--x:-60px; --y:-80px;"></div>
+
+  <div class="firework medium purple top-[45%] left-[18%]"
+       style="--x:80px; --y:-60px; animation-delay:0.2s;"></div>
+
+  <div class="firework small gold top-[45%] left-[18%]"
+       style="--x:-100px; --y:40px; animation-delay:0.4s;"></div>
+
+  <div class="firework large white top-[45%] left-[18%]"
+       style="--x:90px; --y:60px; animation-delay:0.6s;"></div>
+
+
+  <!-- CENTER EXPLOSION -->
+  <div class="firework medium pink top-[35%] left-[50%]"
+       style="--x:-120px; --y:-50px;"></div>
+
+  <div class="firework small blue top-[35%] left-[50%]"
+       style="--x:100px; --y:-90px; animation-delay:0.3s;"></div>
+
+  <div class="firework large purple top-[35%] left-[50%]"
+       style="--x:-70px; --y:90px; animation-delay:0.5s;"></div>
+
+  <div class="firework medium gold top-[35%] left-[50%]"
+       style="--x:120px; --y:70px; animation-delay:0.7s;"></div>
+
+
+  <!-- RIGHT EXPLOSION -->
+  <div class="firework small white top-[45%] left-[82%]"
+       style="--x:-80px; --y:-70px;"></div>
+  <div class="firework medium pink top-[45%] left-[82%]"
+       style="--x:70px; --y:-90px; animation-delay:0.2s;"></div>
+  <div class="firework large blue top-[45%] left-[82%]"
+       style="--x:-100px; --y:60px; animation-delay:0.4s;"></div>
+  <div class="firework small gold top-[45%] left-[82%]"
+       style="--x:90px; --y:80px; animation-delay:0.6s;"></div>
+</div>
+
+
+
+  <div
+  class="relative max-w-7xl mx-auto overflow-hidden rounded-[60px]
+         bg-[url('./Assets/Images/Ellipse.png')]
+         bg-no-repeat bg-center
+         bg-[length:90%]
+         min-h-[480px]"
+>
+
+
+
+    <!-- Main Content -->
+    
+      <div class="relative z-10 grid lg:grid-cols-3 items-end min-h-[480px]">
+
+
+      <!-- ======================================
+     LEFT GIRL IMAGE
+====================================== -->
+<div class="flex justify-center lg:justify-start items-end h-full">
+
+  <img
+    src="Assets/Images/GirlFlashSale.png"
+    alt="Girl"
+    class="w-[420px] lg:w-[620px] object-contain relative z-20 self-end"
+  >
+
+</div>
+
+
+
+      <!-- ======================================
+           CENTER CONTENT
+      ======================================= -->
+      
+        <div class="flex flex-col items-center justify-end text-center px-6 pb-12 h-full">
+
+
+        <!-- Flash Sale Tag -->
+        <img
+          src="Assets/Images/flashsale.png"
+          alt="Flash Sale"
+          class="w-[170px] mb-10 animate-swing"
+        >
+
+        <!-- Heading -->
+        <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+          “Glow Confidently every Day”
+        </h1>
+
+        <!-- Button -->
+        <button
+          onclick="window.location.href='shop.html'"
+          class="mt-10 bg-pink-600 hover:bg-pink-700 transition
+                 text-white text-xl font-semibold
+                 px-14 py-5 rounded-2xl shadow-xl"
+        >
+          Shop Now
+        </button>
+
+      </div>
+
+
+      <!-- ======================================
+     RIGHT PRODUCT IMAGE
+====================================== -->
+<div class="flex justify-center lg:justify-end items-end h-full">
+
+  <img
+    src="Assets/Images/products.png"
+    alt="Products"
+    class="w-[220px] lg:w-[300px] animate-float relative z-10 self-end"
+  >
+
+</div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========== FOOTER ========== -->
+<footer 
+  class="relative py-15 min-h-[350px] flex items-end bg-[url('./Assets/Images/footer.png')] bg-cover bg-center bg-no-repeat" 
+  id="contact"
+>
+  <div class="max-w-6xl mx-auto px-4 w-full">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-10">
+
+      <!-- Brand -->
+     <div class="flex flex-col items-center text-center">
+
+  <!-- Circle Image -->
+  <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+    <img 
+      src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" 
+      class="w-55 h-55 object-contain"
+      alt=""
+    >
+  </div>
+
+  <!-- Text -->
+  <p class="text-white leading-relaxed text-xs">
+    3rd Floor, Valasaravakam,<br/>Chennai – 600800
+  </p>
+
+</div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-widest">Quick Links</h4>
+        <ul class="space-y-2 text-white text-xs">
+          <li><a href="#shop" class="hover:text-pink-300 transition">Shop</a></li>
+          <li><a href="#" class="hover:text-pink-300 transition">New Arrivals</a></li>
+          <li><a href="#offers" class="hover:text-pink-300 transition">Offers</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-widest">Support</h4>
+        <ul class="space-y-2 text-white text-xs">
+          <li><a href="#about" class="hover:text-pink-300 transition">About</a></li>
+          <li><a href="#contact" class="hover:text-pink-300 transition">Contact</a></li>
+          <li><a href="#" class="hover:text-pink-300 transition">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-pink-300 transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-widest">Social Media</h4>
+        <div class="flex gap-3">
+          <a href="#" ><img src="Assets/Images/facebook.png"></img></a>
+          <a href="#" ><img src="Assets/Images/facebook.png"></img></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="./Assets/JS/script.js"></script>
+</body>
+</html>
