@@ -366,6 +366,34 @@ if (shopBtn && shopDropdown) {
   });
 }
 
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileNav = document.getElementById("mobileNav");
+const mobileShopBtn = document.getElementById("mobileShopBtn");
+const mobileShopMenu = document.getElementById("mobileShopMenu");
+
+if (mobileMenuBtn && mobileNav) {
+  mobileMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileNav.classList.toggle("hidden");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (
+      !mobileNav.contains(e.target) &&
+      !mobileMenuBtn.contains(e.target)
+    ) {
+      mobileNav.classList.add("hidden");
+    }
+  });
+}
+
+if (mobileShopBtn && mobileShopMenu) {
+  mobileShopBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileShopMenu.classList.toggle("hidden");
+  });
+}
+
 
 /* =========================================================
    FILTER TOGGLE

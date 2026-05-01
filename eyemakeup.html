@@ -4,42 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Glowify – Where Luxury Meets Skin Science</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Poppins", "Inter", "Arial", "sans-serif"],
-          },
-          colors: {
-            glow: {
-              pink: "#f81f7f",
-              light: "#fff2f8",
-              soft: "#f7d9e8",
-            },
-          },
-          boxShadow: {
-            glow: "0 12px 24px rgba(0, 0, 0, 0.16)",
-            soft: "0 8px 18px rgba(0, 0, 0, 0.12)",
-          },
-        },
-      },
-    };
-  </script>
+
+
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
- <link rel="stylesheet" href="/Assets/CSS/style.css">
+ <link rel="stylesheet" href="./Assets/CSS/output.css">
 </head>
 <body class="overflow-x-hidden">
 
 <!-- ========== STICKY HEADER ========== -->
 <header id="main-header" class="bg-white border-b border-pink-100">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
-    <!-- Logo -->
+  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center gap-4">
     <img src="./Assets/Images/ChatGPT_Image_Feb_19__2026__01_33_43_PM-removebg-preview.png" alt="Logo" class="w-16 h-auto"/>
 
-    <!-- Search -->
+    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-full border border-pink-100 text-gray-600 hover:bg-pink-50 transition">
+      <span class="sr-only">Open menu</span>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+
     <div class="flex-1 max-w-xs hidden sm:block">
       <div class="flex items-center bg-pink-50 rounded-full px-4 py-2 gap-2 border border-pink-100">
         <svg class="w-4 h-4 text-pink-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -47,82 +29,19 @@
       </div>
     </div>
 
-    <!-- Nav -->
-    <!-- Nav -->
     <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 flex-1 justify-center">
       <a href="index.html" class="nav-link hover:text-pink-600">Home</a>
-      <!-- Shop Menu -->
       <div class="relative inline-block">
-
-        <!-- Shop Link -->
-        <button 
-          id="shopBtn"
-          class="nav-link hover:text-pink-600"
-        >
-          Shop
-        </button>
-
-        <!-- Dropdown -->
-        <div 
-        id="shopDropdown"
-        class="hidden absolute top-12 left-0 w-72 bg-white rounded-xl shadow-2xl p-4 z-50"
-      >
-
-          <!-- Heading -->
+        <button id="shopBtn" class="nav-link hover:text-pink-600">Shop</button>
+        <div id="shopDropdown" class="hidden absolute top-12 left-0 w-72 bg-white rounded-xl shadow-2xl p-4 z-50">
           <h2 class="text-xl font-semibold mb-6">Category</h2>
-
-          <!-- Menu Items -->
           <div class="space-y-1">
-
-            <!-- Item -->
-            <a 
-              href="eyemakeup.html"
-              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
-            >
-              Eye Makeup
-              <span>›</span>
-            </a>
-
-            <a 
-              href="fragrance.html"
-              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
-            >
-              Fragrance
-              <span>›</span>
-            </a>
-
-            <a 
-              href="haircare.html"
-              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
-            >
-              Hair Care
-              <span>›</span>
-            </a>
-
-            <a 
-              href="lipsticks.html"
-              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
-            >
-              Lipsticks
-              <span>›</span>
-            </a>
-
-            <a 
-              href="nails.html"
-              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
-            >
-              Nails
-              <span>›</span>
-            </a>
-
-            <a 
-              href="skincare.html"
-              class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg"
-            >
-              Skincare
-              <span>›</span>
-            </a>
-
+            <a href="eyemakeup.html" class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg">Eye Makeup<span>›</span></a>
+            <a href="fragrance.html" class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg">Fragrance<span>›</span></a>
+            <a href="haircare.html" class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg">Hair Care<span>›</span></a>
+            <a href="lipsticks.html" class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg">Lipsticks<span>›</span></a>
+            <a href="nails.html" class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg">Nails<span>›</span></a>
+            <a href="skincare.html" class="flex items-center justify-between bg-gray-100 hover:bg-pink-50 transition px-4 py-3 rounded-xl text-lg">Skincare<span>›</span></a>
           </div>
         </div>
       </div>
@@ -131,27 +50,46 @@
       <a href="contact.html" class="nav-link hover:text-pink-600">Contact</a>
     </nav>
 
-    <!-- Icons -->
-     <div class="flex items-center gap-3 ml-auto">
+    <div class="flex items-center gap-3 ml-auto">
       <a href="cart.html">
-      <button class="relative p-2 hover:bg-pink-50 rounded-full transition">
-        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="absolute top-0.5 right-0.5 w-4 h-4 text-xs bg-pink-500 text-white rounded-full flex items-center justify-center">2</span>
-      </button>
+        <button class="relative p-2 hover:bg-pink-50 rounded-full transition">
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="absolute top-0.5 right-0.5 w-4 h-4 text-xs bg-pink-500 text-white rounded-full flex items-center justify-center">2</span>
+        </button>
       </a>
       <a href="wishlist.html">
-      <button class="p-2 hover:bg-pink-50 rounded-full transition">
-        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </button>
+        <button class="p-2 hover:bg-pink-50 rounded-full transition">
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
       </a>
       <a href="login.html">
-      <button class="p-2 hover:bg-pink-50 rounded-full transition">
-        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      </button>
+        <button class="p-2 hover:bg-pink-50 rounded-full transition">
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
       </a>
     </div>
   </div>
+
+  <div id="mobileNav" class="md:hidden hidden max-w-7xl mx-auto px-4 py-4 space-y-3 border-b border-pink-100">
+    <a href="index.html" class="block text-base font-medium text-gray-700 hover:text-pink-600">Home</a>
+    <button id="mobileShopBtn" class="w-full text-left flex items-center justify-between text-base font-medium text-gray-700 hover:text-pink-600">
+      Shop
+      <span class="text-pink-500">+</span>
+    </button>
+    <div id="mobileShopMenu" class="hidden space-y-1 pl-4">
+      <a href="eyemakeup.html" class="block px-4 py-3 rounded-xl bg-gray-100 hover:bg-pink-50 transition">Eye Makeup</a>
+      <a href="fragrance.html" class="block px-4 py-3 rounded-xl bg-gray-100 hover:bg-pink-50 transition">Fragrance</a>
+      <a href="haircare.html" class="block px-4 py-3 rounded-xl bg-gray-100 hover:bg-pink-50 transition">Hair Care</a>
+      <a href="lipsticks.html" class="block px-4 py-3 rounded-xl bg-gray-100 hover:bg-pink-50 transition">Lipsticks</a>
+      <a href="nails.html" class="block px-4 py-3 rounded-xl bg-gray-100 hover:bg-pink-50 transition">Nails</a>
+      <a href="skincare.html" class="block px-4 py-3 rounded-xl bg-gray-100 hover:bg-pink-50 transition">Skincare</a>
+    </div>
+    <a href="offers.html" class="block text-base font-medium text-gray-700 hover:text-pink-600">Offers</a>
+    <a href="about.html" class="block text-base font-medium text-gray-700 hover:text-pink-600">About</a>
+    <a href="contact.html" class="block text-base font-medium text-gray-700 hover:text-pink-600">Contact</a>
+  </div>
 </header>
+
 
 
 <!-- Product Listing Section -->
@@ -743,7 +681,7 @@
 
 <!-- ================= FOOTER (SAME AS INDEX) ================= -->
 <footer 
-  class="relative py-15 min-h-[350px] flex items-end bg-[url('./Assets/Images/footer.png')] bg-cover bg-center bg-no-repeat" 
+  class="relative py-15 min-h-[350px] flex items-end bg-[url('../Images/footer.png')] bg-cover bg-center bg-no-repeat" 
   id="contact"
 >
   <div class="max-w-6xl mx-auto px-4 w-full">

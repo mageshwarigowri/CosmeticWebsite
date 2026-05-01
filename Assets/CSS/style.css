@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
       --pink-primary: #e8407a;
       --pink-light: #fce4ec;
